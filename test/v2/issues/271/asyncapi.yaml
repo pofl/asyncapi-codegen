@@ -1,0 +1,20 @@
+asyncapi: 2.6.0
+info:
+  title: Sample
+  version: 0.0.2
+defaultContentType: application/json
+channels:
+  channel:
+    publish:
+      operationId: event
+      message:
+        payload:
+          $ref: '#/components/schemas/Payload'
+
+components:
+  schemas:
+
+    Payload:
+      allOf:
+        - type: string
+        - type: string
